@@ -1,0 +1,256 @@
+:root {
+  --coffee-dark: #3b2620;
+  --coffee: #6f4e37;
+  --coffee-light: #a9744f;
+  --cream: #fdf6ec;
+  --cream-alt: #f6ead9;
+  --text: #2c1e1a;
+  --muted: #7a6a62;
+  --radius: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  color: var(--text);
+  background: var(--cream);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(253, 246, 236, 0.9);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid #eadfce;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--coffee-dark);
+}
+
+.nav nav {
+  display: flex;
+  gap: 28px;
+}
+
+.nav nav a {
+  font-size: 0.95rem;
+  color: var(--text);
+  transition: color 0.2s;
+}
+
+.nav nav a:hover {
+  color: var(--coffee-light);
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(160deg, var(--coffee-dark), var(--coffee) 70%);
+  color: var(--cream);
+  padding: 120px 24px;
+  text-align: center;
+}
+
+.hero-inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  letter-spacing: 0.2em;
+  font-size: 0.8rem;
+  opacity: 0.7;
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  font-weight: 800;
+  line-height: 1.35;
+  margin-bottom: 20px;
+}
+
+.hero-desc {
+  font-size: 1.05rem;
+  opacity: 0.85;
+  margin-bottom: 36px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--cream);
+  color: var(--coffee-dark);
+  font-weight: 700;
+  padding: 14px 32px;
+  border-radius: 999px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}
+
+/* Sections */
+.section-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--coffee-dark);
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.section-desc {
+  text-align: center;
+  color: var(--muted);
+  max-width: 600px;
+  margin: 0 auto 48px;
+}
+
+/* About */
+.about {
+  padding: 90px 24px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.about-card {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 28px 22px;
+  box-shadow: 0 6px 20px rgba(59, 38, 32, 0.06);
+}
+
+.about-card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 10px;
+  color: var(--coffee-dark);
+}
+
+.about-card p {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+/* Menu */
+.menu {
+  background: var(--cream-alt);
+  padding: 90px 24px;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  box-shadow: 0 4px 14px rgba(59, 38, 32, 0.05);
+}
+
+.menu-name {
+  font-weight: 600;
+}
+
+.menu-price {
+  color: var(--coffee-light);
+  font-weight: 700;
+}
+
+/* Location */
+.location {
+  padding: 90px 24px;
+  text-align: center;
+}
+
+.location-box {
+  background: #fff;
+  border-radius: var(--radius);
+  padding: 32px;
+  max-width: 480px;
+  margin: 0 auto;
+  box-shadow: 0 6px 20px rgba(59, 38, 32, 0.06);
+}
+
+.location-box p {
+  margin: 8px 0;
+  color: var(--text);
+}
+
+/* Footer */
+.footer {
+  background: var(--coffee-dark);
+  color: var(--cream);
+  text-align: center;
+  padding: 40px 24px;
+}
+
+.footer-sub {
+  opacity: 0.6;
+  font-size: 0.85rem;
+  margin-top: 6px;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  .nav nav {
+    gap: 16px;
+  }
+
+  .hero {
+    padding: 90px 20px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
